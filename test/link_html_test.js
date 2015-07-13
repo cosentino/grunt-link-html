@@ -27,14 +27,12 @@ exports.link_html_2mlab = {
     done();
   },
   link_html_2mlab: function(test) {
-    test.expect(2);
+    test.expect(1);
     var content = grunt.file.read('test/fixtures/index.html');
     console.log(content);
-    var cssIndex = content.indexOf('<link rel="stylesheet" type="text/css" href="test.css">');
-    var jsIndex = content.indexOf('<script src="test.js"></script>');
+    var cssIndex = content.indexOf('<link rel="stylesheet" type="text/css" href="test.css" />');    
 
     test.notEqual(-1, cssIndex, 'should contain link css');
-    test.notEqual(-1, jsIndex, 'should contain link javascript link');
     test.done();
   },
   tearDown: function(done) {
@@ -46,8 +44,7 @@ exports.link_html_2mlab = {
                    '    <!-- end:css -->\n' +
                    '  </head>\n' +
                    '  <body>\n' +
-                   '    <!-- begin:js -->\n' +
-                   '    <!-- end:js -->\n' +
+                   '    &nbsp;' +                   
                    '  </body>\n' +
                    '</html>\n';
     grunt.file.write('test/fixtures/index.html', htmlFile);
