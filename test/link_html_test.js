@@ -22,11 +22,11 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.link_html = {
+exports.link_html_2mlab = {
   setUp: function(done) {
     done();
   },
-  link_html: function(test) {
+  link_html_2mlab: function(test) {
     test.expect(2);
     var content = grunt.file.read('test/fixtures/index.html');
     console.log(content);

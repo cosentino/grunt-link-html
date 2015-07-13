@@ -1,6 +1,6 @@
 /*
- * grunt-link-html
- * https://github.com/pythonandchips/grunt-link-html
+ * grunt-link-html-2mlab
+ * https://github.com/cosentino/grunt-link-html
  *
  * Copyright (c) 2013 Colin Gemmell
  * Licensed under the MIT license.
@@ -10,7 +10,7 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask('link_html', 'link css and javascipt in html file', function() {
+  grunt.registerMultiTask('link_html_2mlab', 'link css and javascipt in html file', function() {
 
     var options = this.options({
       expand: true,
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     var includes = function(template, path, options){
       var cssFiles = grunt.file.expand(options, path);
       var cssIncludes = cssFiles.map( function(file) {
-        return grunt.template.process(template, {data: {file: file}});
+        return grunt.template.process(template, {data: {file: options.dest + file}});
       });
       cssIncludes.unshift('');
       cssIncludes = cssIncludes.join('\n') + '\n';

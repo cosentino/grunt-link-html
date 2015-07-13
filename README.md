@@ -1,4 +1,4 @@
-# grunt-link-html
+# grunt-link-html-2mlab
 
 > Insert css and Javascript links into html file
 
@@ -8,23 +8,23 @@ This plugin requires Grunt `~0.4.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-link-html --save-dev
+npm install grunt-link-html-2mlab --save-dev
 ```
 
 One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-link-html');
+grunt.loadNpmTasks('grunt-link-html-2mlab');
 ```
 
-## The "link_html" task
+## The "link_html_2mlab" task
 
 ### Overview
-In your project's Gruntfile, add a section named `link_html` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `link_html_2mlab` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  link_html: {
+  link_html_2mlab: {
     your_target: {
       // Target-specific file lists and/or options go here.
       jsFiles: ['path/to/js/files.js'],

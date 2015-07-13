@@ -1,8 +1,8 @@
 {
-  "name": "grunt-link-html",
+  "name": "grunt-link-html-2mlab",
   "description": "Insert css and Javascript links into html file",
   "version": "0.1.2",
-  "homepage": "https://github.com/pythonandchips/grunt-link-html",
+  "homepage": "https://github.com/cosentino/grunt-link-html",
   "author": {
     "name": "Colin Gemmell",
     "email": "pythonandchips@gmail.com",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pythonandchips/grunt-link-html.git"
+    "url": "git://github.com/cosentino/grunt-link-html.git"
   },
   "bugs": {
     "url": "https://github.com/pythonandchips/grunt-link-html/issues"
@@ -29,10 +29,10 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.1.1",
+    "grunt": "~0.4.0",
     "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.1.2",
-    "grunt": "~0.4.0"
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"

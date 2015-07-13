@@ -1,6 +1,6 @@
 /*
- * grunt-link-html
- * https://github.com/pythonandchips/grunt-link-html
+ * grunt-link-html-2mlab
+ * https://github.com/cosentino/grunt-link-html
  *
  * Copyright (c) 2013 Colin Gemmell
  * Licensed under the MIT license.
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    link_html: {
+    link_html_2mlab: {
       development: {
         cssFiles: ['*.css'],
         jsFiles: ['*.js'],
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'link_html', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'link_html_2mlab', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
