@@ -36,7 +36,9 @@ module.exports = function(grunt) {
       if (begin) {
         var end = content.html.match(new RegExp('<!--\\s*end:' + fileType + '\\s*-->')).index;
         var startReplace = begin.index + begin[0].length;
-        content.html = content.html.substring(0, startReplace) + files + content.html.substring(end, content.html.length);
+        var conditionalCommentBegin = '\n<!--[if lte IE 9]>';
+        var conditionalCommentEnd = '<![endif]-->\n';
+        content.html = content.html.substring(0, startReplace) + conditionalCommentBegin + files + conditionalCommentEnd + content.html.substring(end, content.html.length);
       } else {
         skip = true;
         grunt.log.ok('Skipping ' + fileType  + ' for ' + filepath);
@@ -45,7 +47,7 @@ module.exports = function(grunt) {
     };
 
     var cssIncludes = includes('<link rel="stylesheet" type="text/css" href="<%= file %>" />', this.data.cssFiles, options);
-    var targetFiles = grunt.file.expand(options, this.data.targetHtml);    
+    var targetFiles = grunt.file.expand(options, this.data.targetHtml);        
 
     targetFiles.forEach(function(filepath) {
       var content = {html: grunt.file.read(options.cwd + '/' + filepath)};
@@ -54,7 +56,7 @@ module.exports = function(grunt) {
         grunt.log.ok('Writing file '+ filepath);
         grunt.file.write(options.cwd + '/' + filepath, content.html);
       }
-    });
+    });    
 
   });
 
