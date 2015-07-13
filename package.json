@@ -1,7 +1,7 @@
 {
   "name": "grunt-link-html-2mlab",
   "description": "Insert css and Javascript links into html file",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/cosentino/grunt-link-html",
   "author": {
     "name": "Colin Gemmell",
